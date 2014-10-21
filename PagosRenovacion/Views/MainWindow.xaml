@@ -1,0 +1,18 @@
+﻿<Window x:Name="login" x:Class="PagosRenovacion.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Pagos y Renovación de Contratos- Control de Acceso" Height="247" Width="417" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="/PagosRenovacion;component/images/diseno_icono.png">
+    <Grid Margin="0,0,-6,0">
+        <Image HorizontalAlignment="Center" Height="70" Margin="110,10,126,0" VerticalAlignment="Top" Width="181" Source="/PagosRenovacion;component/images/IMCA IAP.png" >
+
+        </Image>
+        <Label Content="Usuario" HorizontalAlignment="Left" Margin="63,93,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Contraseña" HorizontalAlignment="Left" Margin="37,124,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="txtuser" HorizontalAlignment="Left" Height="23" Margin="132,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" FontSize="16" TabIndex="0"/>
+        <Button x:Name="btndone" Content="Aceptar" HorizontalAlignment="Left" Height="24" Margin="132,166,0,0" VerticalAlignment="Top" Width="93" TabIndex="2" Click="btndone_Click" IsDefault="True"/>
+        <PasswordBox x:Name="txtpass" HorizontalAlignment="Left" Margin="132,124,0,0" VerticalAlignment="Top" Width="205" FontSize="16" TabIndex="1"/>
+        <Button x:Name="btncancel" Content="Cancelar" HorizontalAlignment="Left" Height="24" Margin="242,166,0,0" VerticalAlignment="Top" Width="95" TabIndex="2" Click="btncancel_Click"/>
+
+    </Grid>
+
+</Window>

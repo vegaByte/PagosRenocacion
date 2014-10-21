@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7210e41167d14dd4b1df7195585c823e" Name="Diagram1">
+        <EntityTypeShape EntityType="dbpagoscontratosModel.prc_actividades" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbpagoscontratosModel.prc_conceptos" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbpagoscontratosModel.prc_contratos" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbpagoscontratosModel.prc_date_contratos" Width="1.5" PointX="3" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbpagoscontratosModel.prc_date_pagos" Width="1.5" PointX="8.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbpagoscontratosModel.prc_pagos" Width="1.5" PointX="6" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbpagoscontratosModel.prc_status" Width="1.5" PointX="5.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbpagoscontratosModel.prc_tipopagos" Width="1.5" PointX="8.25" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbpagoscontratosModel.prc_usuarios" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbpagoscontratosModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <AssociationConnector Association="dbpagoscontratosModel.FK_prc_contratos_prc_actividades" ManuallyRouted="false" />
+        <AssociationConnector Association="dbpagoscontratosModel.FK_prc_pagos_prc_conceptos" ManuallyRouted="false" />
+        <AssociationConnector Association="dbpagoscontratosModel.FK_prc_contratos_prc_usuarios" ManuallyRouted="false" />
+        <AssociationConnector Association="dbpagoscontratosModel.FK_prc_date_contratos_prc_contratos" ManuallyRouted="false" />
+        <AssociationConnector Association="dbpagoscontratosModel.FK_prc_date_pagos_prc_pagos" ManuallyRouted="false" />
+        <AssociationConnector Association="dbpagoscontratosModel.FK_prc_pagos_prc_status" ManuallyRouted="false" />
+        <AssociationConnector Association="dbpagoscontratosModel.FK_prc_pagos_prc_tipopagos" ManuallyRouted="false" />
+        <AssociationConnector Association="dbpagoscontratosModel.FK_prc_pagos_prc_usuarios" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

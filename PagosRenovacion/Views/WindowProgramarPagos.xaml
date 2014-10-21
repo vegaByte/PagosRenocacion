@@ -1,0 +1,73 @@
+﻿<Window x:Class="PagosRenovacion.WindowProgramarPagos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"  
+        Title="Pagos y Renovación de Contratos- Programar pagos" Height="490" Width="483.101" Loaded="Window_Loaded"
+        ResizeMode="NoResize"
+        Language="Es-Mx" Icon="/PagosRenovacion;component/images/diseno_icono.png"
+        xmlns:sysglb="clr-namespace:System.Globalization;assembly=mscorlib" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition />
+            <ColumnDefinition Width="30"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition />
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Column="1" Grid.Row="1">
+            <StackPanel Margin="0,20,0,0">
+                <Label Content="Concepto de pago:" FontSize="16"/>
+                <ComboBox x:Name="cmbxConcepto" FontSize="16" ItemsSource="{Binding ConceptosList, Source={StaticResource ConceptosR}}" DisplayMemberPath="nombre" SelectedValuePath="id_conceptos" TabIndex="-1"/>
+                <Label Content="Monto de pago:" FontSize="16"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text=" $ " FontWeight="Light" TextAlignment="Center" FontSize="20" Background="#02543B" Foreground="White"/>
+                    <TextBox KeyDown="txtNombre_KeyDown" x:Name="txtNombre" Height="28" Width="173" FontSize="16" MaxLength="15" TabIndex="0" HorizontalAlignment="Left" TextAlignment="Right"/>
+                </StackPanel>
+                <Label Content="Tipo de pago:" FontSize="16"/>
+                <ComboBox x:Name="cmbxTipoPago" FontSize="16"
+                      ItemsSource="{Binding TipoPagoList, Source={StaticResource TipoPagoR}}" DisplayMemberPath="nombre" SelectedValuePath="id_tipopagos"
+                      SelectionChanged="cmbxTipoPago_SelectionChanged" TabIndex="2"/>
+                <Label Content="Fecha a recordar:" FontSize="16" Margin="0,10,0,0"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <ComboBox x:Name="cmbxDiaNumero" HorizontalAlignment="Left" Width="50" FontSize="16" TabIndex="4"/>
+                    <ComboBox x:Name="cmbxDiaSemana" HorizontalAlignment="Left" Width="182" FontSize="16" TabIndex="3">
+                        <ComboBox.Items>
+                            <TextBlock Text="Lunes"/>
+                            <TextBlock Text="Martes" />
+                            <TextBlock Text="Miercoles"/>
+                            <TextBlock Text="Jueves"/>
+                            <TextBlock Text="Viernes"/>
+                            <TextBlock Text="Sábado"/>
+                        </ComboBox.Items>
+                    </ComboBox>
+                    <DatePicker x:Name="datePago" HorizontalAlignment="Left" FontSize="16" TabIndex="5" Width="196"/>
+                    <Grid Grid.Row="1" Margin="0,10,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Orientation="Vertical" Margin="0,0,10,0">
+                            <Label x:Name="lbFechaInicio" Content="Fecha Inicio:" FontSize="16"/>
+                            <DatePicker x:Name="dateRecordarInicio" FontSize="16" SelectedDateChanged="dateRecordarInicio_SelectedDateChanged" TabIndex="6"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical" Grid.Column="1" Margin="10,0,0,0">
+                            <Label x:Name="lbRecordarHasta" Content="Recordar hasta:" FontSize="16"/>
+                            <DatePicker x:Name="dateRecordarHasta" FontSize="16" SelectedDateChanged="dateRecordarInicio_SelectedDateChanged" TabIndex="7"/>
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20">
+                    <Button x:Name="btnGuardar" Click="btnGuardar_Click" Content="  Guardar  " FontSize="16" TabIndex="8" IsDefault="True" Margin="0,0,5,0"/>
+                    <Button x:Name="btnCancelar" Content="  Cancelar  " FontSize="16" Click="btnCancelar_Click" TabIndex="9" Margin="5,0,0,0"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

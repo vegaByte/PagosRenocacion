@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbpagoscontratosModelStoreContainer" CdmEntityContainer="dbpagoscontratosEntities">
+    <EntitySetMapping Name="prc_actividades">
+      <EntityTypeMapping TypeName="dbpagoscontratosModel.prc_actividades">
+        <MappingFragment StoreEntitySet="prc_actividades">
+          <ScalarProperty Name="id_actividades" ColumnName="id_actividades" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="prc_conceptos">
+      <EntityTypeMapping TypeName="dbpagoscontratosModel.prc_conceptos">
+        <MappingFragment StoreEntitySet="prc_conceptos">
+          <ScalarProperty Name="id_conceptos" ColumnName="id_conceptos" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="prc_contratos">
+      <EntityTypeMapping TypeName="dbpagoscontratosModel.prc_contratos">
+        <MappingFragment StoreEntitySet="prc_contratos">
+          <ScalarProperty Name="id_contratos" ColumnName="id_contratos" />
+          <ScalarProperty Name="concepto" ColumnName="concepto" />
+          <ScalarProperty Name="fk_id_actividades" ColumnName="fk_id_actividades" />
+          <ScalarProperty Name="fk_id_usuarios" ColumnName="fk_id_usuarios" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="prc_date_contratos">
+      <EntityTypeMapping TypeName="dbpagoscontratosModel.prc_date_contratos">
+        <MappingFragment StoreEntitySet="prc_date_contratos">
+          <ScalarProperty Name="id_date_contratos" ColumnName="id_date_contratos" />
+          <ScalarProperty Name="fecha_nota" ColumnName="fecha_nota" />
+          <ScalarProperty Name="nota" ColumnName="nota" />
+          <ScalarProperty Name="fk_id_contratos" ColumnName="fk_id_contratos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="prc_date_pagos">
+      <EntityTypeMapping TypeName="dbpagoscontratosModel.prc_date_pagos">
+        <MappingFragment StoreEntitySet="prc_date_pagos">
+          <ScalarProperty Name="fk_id_status" ColumnName="fk_id_status" />
+          <ScalarProperty Name="id_date_pagos" ColumnName="id_date_pagos" />
+          <ScalarProperty Name="fecha_nota" ColumnName="fecha_nota" />
+          <ScalarProperty Name="nota" ColumnName="nota" />
+          <ScalarProperty Name="fk_id_pagos" ColumnName="fk_id_pagos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="prc_pagos">
+      <EntityTypeMapping TypeName="dbpagoscontratosModel.prc_pagos">
+        <MappingFragment StoreEntitySet="prc_pagos">
+          <ScalarProperty Name="id_pagos" ColumnName="id_pagos" />
+          <ScalarProperty Name="date_inicio" ColumnName="date_inicio" />
+          <ScalarProperty Name="date_final" ColumnName="date_final" />
+          <ScalarProperty Name="monto" ColumnName="monto" />
+          <ScalarProperty Name="fk_id_conceptos" ColumnName="fk_id_conceptos" />
+          <ScalarProperty Name="fk_id_tipopagos" ColumnName="fk_id_tipopagos" />
+          <ScalarProperty Name="fk_id_usuarios" ColumnName="fk_id_usuarios" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="prc_status">
+      <EntityTypeMapping TypeName="dbpagoscontratosModel.prc_status">
+        <MappingFragment StoreEntitySet="prc_status">
+          <ScalarProperty Name="id_status" ColumnName="id_status" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="prc_tipopagos">
+      <EntityTypeMapping TypeName="dbpagoscontratosModel.prc_tipopagos">
+        <MappingFragment StoreEntitySet="prc_tipopagos">
+          <ScalarProperty Name="id_tipopagos" ColumnName="id_tipopagos" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="prc_usuarios">
+      <EntityTypeMapping TypeName="dbpagoscontratosModel.prc_usuarios">
+        <MappingFragment StoreEntitySet="prc_usuarios">
+          <ScalarProperty Name="id_usuarios" ColumnName="id_usuarios" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="nivel" ColumnName="nivel" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="puesto" ColumnName="puesto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="dbpagoscontratosModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="prc_date_pagos_semanales">
+      <EntityTypeMapping TypeName="dbpagoscontratosModel.prc_date_pagos_semanales">
+        <MappingFragment StoreEntitySet="prc_date_pagos_semanales">
+          <ScalarProperty Name="fecha_nota" ColumnName="fecha_nota" />
+          <ScalarProperty Name="fk_id_status" ColumnName="fk_id_status" />
+          <ScalarProperty Name="fk_id_pagos" ColumnName="fk_id_pagos" />
+          <ScalarProperty Name="nota" ColumnName="nota" />
+          <ScalarProperty Name="dia_nota" ColumnName="dia_nota" />
+          <ScalarProperty Name="id_date_pagos_semanales" ColumnName="id_date_pagos_semanales" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="prc_view_date_pagos">
+      <EntityTypeMapping TypeName="dbpagoscontratosModel.prc_view_date_pagos">
+        <MappingFragment StoreEntitySet="prc_view_date_pagos">
+          <ScalarProperty Name="nota" ColumnName="nota" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="fecha_nota" ColumnName="fecha_nota" />
+          <ScalarProperty Name="monto" ColumnName="monto" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="prc_view_date_contratos">
+      <EntityTypeMapping TypeName="dbpagoscontratosModel.prc_view_date_contratos">
+        <MappingFragment StoreEntitySet="prc_view_date_contratos">
+          <ScalarProperty Name="nota" ColumnName="nota" />
+          <ScalarProperty Name="fecha_nota" ColumnName="fecha_nota" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="concepto" ColumnName="concepto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

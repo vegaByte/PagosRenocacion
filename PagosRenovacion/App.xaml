@@ -1,0 +1,36 @@
+﻿<Application x:Class="PagosRenovacion.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:viewmodels="clr-namespace:PagosRenovacion.ViewModels"
+             xmlns:views="clr-namespace:PagosRenovacion.Views"
+             xmlns:commands="clr-namespace:PagosRenovacion.Commands"
+             xmlns:converters="clr-namespace:PagosRenovacion.Commands.Converters"
+             StartupUri="Views/MainWindow.xaml">
+    <Application.Resources>
+        <viewmodels:ActividadesVM x:Key="ActividadesR" />
+        <viewmodels:ConceptosVM x:Key="ConceptosR" />
+        <viewmodels:ContratosVM x:Key="ContratosR" />
+        <viewmodels:DateContratosVM x:Key="DateContratosR"/>
+        <viewmodels:DatePagosVM x:Key="DatePagosR"/>
+        <viewmodels:PagosVM x:Key="PagosR"/>
+        <viewmodels:StatusVM x:Key="StatusR"/>
+        <viewmodels:TipoPagoVM x:Key="TipoPagoR"/>
+        <viewmodels:UsuariosVM x:Key="Usuarios"/>
+        <viewmodels:ViewDatePagosVM x:Key="ViewDatePagosR" />
+        <viewmodels:ViewDateContratosVM x:Key="ViewDateContratosR"/>
+        <views:WindowAdministrar x:Key="ViewAdministrar"/>
+        <viewmodels:DatePagosSemanalesVM x:Key="DatePagosSemanalesR"/>
+        <commands:UsuarioActual x:Key="UsuarioActualR"/>
+        <Image x:Key="iconPrint" Source="images/iconos/Print.png"/>
+        <Image x:Key="iconEdit" Source="images/iconos/Edit.png"/>
+        <Image x:Key="iconAdd" Source="images/iconos/Add.png"/>
+        <Image x:Key="iconDelete" Source="images/iconos/Delete.png"/>
+        <Style x:Key="myButtonIcon" TargetType="Button">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="Height" Value="52"/>
+            <Setter Property="Width" Value="54"/>
+        </Style>
+        <converters:ConverterStatus x:Key="ConverterColorStatus" />
+    </Application.Resources>
+</Application>
