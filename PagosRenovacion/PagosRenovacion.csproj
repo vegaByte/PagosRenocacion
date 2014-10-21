@@ -131,7 +131,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ClassDataGrid.cs" />
     <Compile Include="Commands\Converters\ConverterStatus.cs" />
     <Compile Include="Commands\LoginCommand.cs" />
     <Compile Include="Commands\UsuarioActual.cs" />
