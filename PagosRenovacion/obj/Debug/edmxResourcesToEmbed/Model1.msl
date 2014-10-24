@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="dbpagoscontratosModelStoreContainer" CdmEntityContainer="dbpagoscontratosEntities">
+  <EntityContainerMapping StorageEntityContainer="PRCModelStoreContainer" CdmEntityContainer="dbpagoscontratosEntities">
     <EntitySetMapping Name="prc_actividades">
-      <EntityTypeMapping TypeName="dbpagoscontratosModel.prc_actividades">
+      <EntityTypeMapping TypeName="PRCModel.prc_actividades">
         <MappingFragment StoreEntitySet="prc_actividades">
           <ScalarProperty Name="id_actividades" ColumnName="id_actividades" />
           <ScalarProperty Name="nombre" ColumnName="nombre" />
@@ -10,7 +10,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="prc_conceptos">
-      <EntityTypeMapping TypeName="dbpagoscontratosModel.prc_conceptos">
+      <EntityTypeMapping TypeName="PRCModel.prc_conceptos">
         <MappingFragment StoreEntitySet="prc_conceptos">
           <ScalarProperty Name="id_conceptos" ColumnName="id_conceptos" />
           <ScalarProperty Name="nombre" ColumnName="nombre" />
@@ -18,7 +18,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="prc_contratos">
-      <EntityTypeMapping TypeName="dbpagoscontratosModel.prc_contratos">
+      <EntityTypeMapping TypeName="PRCModel.prc_contratos">
         <MappingFragment StoreEntitySet="prc_contratos">
           <ScalarProperty Name="id_contratos" ColumnName="id_contratos" />
           <ScalarProperty Name="concepto" ColumnName="concepto" />
@@ -28,7 +28,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="prc_date_contratos">
-      <EntityTypeMapping TypeName="dbpagoscontratosModel.prc_date_contratos">
+      <EntityTypeMapping TypeName="PRCModel.prc_date_contratos">
         <MappingFragment StoreEntitySet="prc_date_contratos">
           <ScalarProperty Name="id_date_contratos" ColumnName="id_date_contratos" />
           <ScalarProperty Name="fecha_nota" ColumnName="fecha_nota" />
@@ -38,23 +38,35 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="prc_date_pagos">
-      <EntityTypeMapping TypeName="dbpagoscontratosModel.prc_date_pagos">
+      <EntityTypeMapping TypeName="PRCModel.prc_date_pagos">
         <MappingFragment StoreEntitySet="prc_date_pagos">
-          <ScalarProperty Name="fk_id_status" ColumnName="fk_id_status" />
           <ScalarProperty Name="id_date_pagos" ColumnName="id_date_pagos" />
           <ScalarProperty Name="fecha_nota" ColumnName="fecha_nota" />
           <ScalarProperty Name="nota" ColumnName="nota" />
           <ScalarProperty Name="fk_id_pagos" ColumnName="fk_id_pagos" />
+          <ScalarProperty Name="fk_id_status" ColumnName="fk_id_status" />
+          <ScalarProperty Name="monto" ColumnName="monto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="prc_date_pagos_semanales">
+      <EntityTypeMapping TypeName="PRCModel.prc_date_pagos_semanales">
+        <MappingFragment StoreEntitySet="prc_date_pagos_semanales">
+          <ScalarProperty Name="id_date_pagos_semanales" ColumnName="id_date_pagos_semanales" />
+          <ScalarProperty Name="dia_nota" ColumnName="dia_nota" />
+          <ScalarProperty Name="nota" ColumnName="nota" />
+          <ScalarProperty Name="fk_id_pagos" ColumnName="fk_id_pagos" />
+          <ScalarProperty Name="fk_id_status" ColumnName="fk_id_status" />
+          <ScalarProperty Name="fecha_nota" ColumnName="fecha_nota" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="prc_pagos">
-      <EntityTypeMapping TypeName="dbpagoscontratosModel.prc_pagos">
+      <EntityTypeMapping TypeName="PRCModel.prc_pagos">
         <MappingFragment StoreEntitySet="prc_pagos">
           <ScalarProperty Name="id_pagos" ColumnName="id_pagos" />
           <ScalarProperty Name="date_inicio" ColumnName="date_inicio" />
           <ScalarProperty Name="date_final" ColumnName="date_final" />
-          <ScalarProperty Name="monto" ColumnName="monto" />
           <ScalarProperty Name="fk_id_conceptos" ColumnName="fk_id_conceptos" />
           <ScalarProperty Name="fk_id_tipopagos" ColumnName="fk_id_tipopagos" />
           <ScalarProperty Name="fk_id_usuarios" ColumnName="fk_id_usuarios" />
@@ -62,7 +74,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="prc_status">
-      <EntityTypeMapping TypeName="dbpagoscontratosModel.prc_status">
+      <EntityTypeMapping TypeName="PRCModel.prc_status">
         <MappingFragment StoreEntitySet="prc_status">
           <ScalarProperty Name="id_status" ColumnName="id_status" />
           <ScalarProperty Name="nombre" ColumnName="nombre" />
@@ -70,7 +82,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="prc_tipopagos">
-      <EntityTypeMapping TypeName="dbpagoscontratosModel.prc_tipopagos">
+      <EntityTypeMapping TypeName="PRCModel.prc_tipopagos">
         <MappingFragment StoreEntitySet="prc_tipopagos">
           <ScalarProperty Name="id_tipopagos" ColumnName="id_tipopagos" />
           <ScalarProperty Name="nombre" ColumnName="nombre" />
@@ -78,7 +90,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="prc_usuarios">
-      <EntityTypeMapping TypeName="dbpagoscontratosModel.prc_usuarios">
+      <EntityTypeMapping TypeName="PRCModel.prc_usuarios">
         <MappingFragment StoreEntitySet="prc_usuarios">
           <ScalarProperty Name="id_usuarios" ColumnName="id_usuarios" />
           <ScalarProperty Name="password" ColumnName="password" />
@@ -88,36 +100,24 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="prc_date_pagos_semanales">
-      <EntityTypeMapping TypeName="dbpagoscontratosModel.prc_date_pagos_semanales">
-        <MappingFragment StoreEntitySet="prc_date_pagos_semanales">
+    <EntitySetMapping Name="prc_view_date_contratos">
+      <EntityTypeMapping TypeName="PRCModel.prc_view_date_contratos">
+        <MappingFragment StoreEntitySet="prc_view_date_contratos">
+          <ScalarProperty Name="concepto" ColumnName="concepto" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
           <ScalarProperty Name="fecha_nota" ColumnName="fecha_nota" />
-          <ScalarProperty Name="fk_id_status" ColumnName="fk_id_status" />
-          <ScalarProperty Name="fk_id_pagos" ColumnName="fk_id_pagos" />
           <ScalarProperty Name="nota" ColumnName="nota" />
-          <ScalarProperty Name="dia_nota" ColumnName="dia_nota" />
-          <ScalarProperty Name="id_date_pagos_semanales" ColumnName="id_date_pagos_semanales" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="prc_view_date_pagos">
-      <EntityTypeMapping TypeName="dbpagoscontratosModel.prc_view_date_pagos">
+      <EntityTypeMapping TypeName="PRCModel.prc_view_date_pagos">
         <MappingFragment StoreEntitySet="prc_view_date_pagos">
-          <ScalarProperty Name="nota" ColumnName="nota" />
-          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
-          <ScalarProperty Name="fecha_nota" ColumnName="fecha_nota" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
           <ScalarProperty Name="monto" ColumnName="monto" />
-          <ScalarProperty Name="nombre" ColumnName="nombre" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="prc_view_date_contratos">
-      <EntityTypeMapping TypeName="dbpagoscontratosModel.prc_view_date_contratos">
-        <MappingFragment StoreEntitySet="prc_view_date_contratos">
-          <ScalarProperty Name="nota" ColumnName="nota" />
           <ScalarProperty Name="fecha_nota" ColumnName="fecha_nota" />
-          <ScalarProperty Name="nombre" ColumnName="nombre" />
-          <ScalarProperty Name="concepto" ColumnName="concepto" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="nota" ColumnName="nota" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

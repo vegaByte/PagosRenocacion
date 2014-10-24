@@ -97,14 +97,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PagosRenovacion.exe" size="498688">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PagosRenovacion.exe" size="495616">
       <assemblyIdentity name="PagosRenovacion" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>qpBdTU9Mo7c75tpWjwxPbP4gVh4aN3h32jMZq14grmQ=</dsig:DigestValue>
+        <dsig:DigestValue>kYmxj1ccXrtCYIoY7kQOQHF/LprtWmFc1kuaNufzAgo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -441,13 +441,13 @@
       <dsig:DigestValue>3IlzvhOAqgabDNC/tDScQ6eFlZx+cV53Zjf95VLhgGo=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="PagosRenovacion.exe.config" size="3165">
+  <file name="PagosRenovacion.exe.config" size="1676">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>PmfKY6zK1Ww4z5yNdah7SheQRHVkyHwAEp3Vw12thj0=</dsig:DigestValue>
+      <dsig:DigestValue>0Eo66uqkTbpwta4kOK45Lvc0UbNLZhLvoafdUZOqAs4=</dsig:DigestValue>
     </hash>
   </file>
   <file name="ScriptBD\dbpagoscontratos.sql" size="37872">

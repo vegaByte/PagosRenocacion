@@ -84,7 +84,7 @@ namespace PagosRenovacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error en la conexión.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return null;
             }
         }

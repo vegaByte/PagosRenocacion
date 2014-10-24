@@ -55,8 +55,8 @@
       <PropertyRef Name="id_pagos" />
     </Key>
     <Property Name="id_pagos" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="date_inicio" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="date_final" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="date_inicio" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="date_final" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="monto" Type="Double" />
     <Property Name="fk_id_conceptos" Type="Int32" Nullable="false" />
     <Property Name="fk_id_tipopagos" Type="Int32" Nullable="false" />
@@ -256,7 +256,7 @@
     <NavigationProperty Name="prc_pagos" Relationship="dbpagoscontratosModel.FK_prc_date_pagos_semanales_prc_pagos" FromRole="prc_date_pagos_semanales" ToRole="prc_pagos" />
     <Property Name="fk_id_status" Type="Int32" Nullable="false" />
     <NavigationProperty Name="prc_status" Relationship="dbpagoscontratosModel.FK_prc_date_pagos_semanales_prc_status" FromRole="prc_date_pagos_semanales" ToRole="prc_status" />
-    <Property Name="fecha_nota" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="fecha_nota" Type="DateTime" Nullable="false" Precision="3" />
   </EntityType>
   <Association Name="FK_prc_date_pagos_semanales_prc_pagos">
     <End Type="dbpagoscontratosModel.prc_pagos" Role="prc_pagos" Multiplicity="1" />
@@ -302,7 +302,7 @@
     </Key>
     <Property Name="nombre" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="monto" Type="Double" />
-    <Property Name="fecha_nota" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="fecha_nota" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="Expr1" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
     <Property Name="nota" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
   </EntityType>
@@ -314,7 +314,7 @@
     </Key>
     <Property Name="concepto" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
     <Property Name="nombre" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="fecha_nota" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="fecha_nota" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="nota" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
   </EntityType>
 </Schema>
