@@ -23,7 +23,7 @@
             <Label x:Name="___Sin_nombre_" Content="Buscar:" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" FontSize="16"/>
             <Label Content="Del " HorizontalAlignment="Left" Margin="407,28,0,0" VerticalAlignment="Top" FontSize="16"/>
             <DatePicker x:Name="dateInicio" HorizontalAlignment="Left" Margin="445,28,0,0" VerticalAlignment="Top" Width="154" FontSize="16" SelectedDateChanged="dateInicio_SelectedDateChanged" TabIndex="3"/>
-            <DatePicker x:Name="dateFin" HorizontalAlignment="Left" Margin="445,59,0,0" VerticalAlignment="Top" Width="154" FontSize="16" SelectedDateChanged="dateInicio_SelectedDateChanged" TabIndex="4"/>
+            <DatePicker x:Name="dateFin" HorizontalAlignment="Left" Margin="445,59,0,0" VerticalAlignment="Top" Width="154" FontSize="16" SelectedDateChanged="dateFin_SelectedDateChanged" TabIndex="4"/>
             <Label Content="al" HorizontalAlignment="Left" Margin="418,59,0,0" VerticalAlignment="Top" FontSize="16"/>
 
             <!--<Image x:Name="btn2" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="64" Height="62" Source="/PagosRenovacion;component/images/iconos/Print.png">
@@ -43,19 +43,13 @@
                       Checked="chbxEdicion_Checked" Unchecked="chbxEdicion_Unchecked" Grid.Column="1" TabIndex="5"/>
         </Grid>
         <DataGrid GridLinesVisibility="None" x:Name="gridServiciosProgramados" Grid.Column="1" Grid.Row="2" AutoGenerateColumns="False" IsReadOnly="True"
-                  ItemsSource="{Binding PagosList, Source={StaticResource PagosR}}" IsHitTestVisible="True" CellEditEnding="gridPagosProgramados_CellEditEnding">
+                  ItemsSource="{Binding PagosList, Source={StaticResource PagosR}}" IsHitTestVisible="True" CellEditEnding="gridServiciosProgramados_CellEditEnding">
             <DataGrid.Columns>
-                <DataGridComboBoxColumn Header="Concepto" SelectedValueBinding="{Binding fk_id_conceptos}" DisplayMemberPath="nombre" SelectedValuePath="id_conceptos" ItemsSource="{Binding Source={StaticResource ConceptosR}, Path=ConceptosList}"/>
-                <DataGridTextColumn Header="Fecha Inicio" Binding="{Binding fecha_nota, StringFormat=\{0:dd\/MMMM\/yyyy\}}" IsReadOnly="True"/>
-                <DataGridComboBoxColumn Header="Status" SelectedValueBinding="{Binding fk_id_status}" DisplayMemberPath="nombre"
-                                        SelectedValuePath="id_status" ItemsSource="{Binding Source={StaticResource StatusR}, Path=StatusList}">
-                    <!--<DataGridComboBoxColumn.CellStyle>
-                        <Style TargetType="{x:Type DataGridCell}">
-                            <Setter Property="Foreground" Value="Red" />
-                        </Style>
-                    </DataGridComboBoxColumn.CellStyle>-->
-                </DataGridComboBoxColumn>
-                <DataGridTextColumn Header="Nota" Binding="{Binding nota}"/>
+                <DataGridComboBoxColumn Header="Concepto" SelectedValueBinding="{Binding fk_id_conceptos}" DisplayMemberPath="nombre" SelectedValuePath="id_conceptos" ItemsSource="{Binding Source={StaticResource ConceptosR}, Path=ConceptosList, Mode=TwoWay}"/>
+                <DataGridTextColumn Header="    Fecha Inicio    " Binding="{Binding date_inicio, StringFormat=\{0:d\}}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Fecha Terminación" Binding="{Binding date_final, StringFormat=\{0:d\}}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Tipo de Pago" Binding="{Binding prc_tipopagos.nombre}" IsReadOnly="True"/>
+                
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

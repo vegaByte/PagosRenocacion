@@ -244,7 +244,8 @@ namespace PagosRenovacion
                                         fk_id_pagos = DB.contexto.prc_pagos.Max(a => a.id_pagos),
                                         fk_id_status = 3,
                                         fecha_nota = time,
-                                        nota = ""
+                                        nota = "",
+                                        monto = val
                                     };
                                     DB.contexto.prc_date_pagos.Add(datePagoObj);
                                 }
@@ -294,6 +295,7 @@ namespace PagosRenovacion
         }
         private void agregarPagosPorMeses(int meses, int diaRecordar)
         {
+            float val = Convert.ToSingle(txtNombre.Text, CultureInfo.CreateSpecificCulture("en-US"));
             try
             {
                 string cadenaMostrar = "";
@@ -312,7 +314,8 @@ namespace PagosRenovacion
                         fk_id_pagos = DB.contexto.prc_pagos.Max(a => a.id_pagos),
                         fk_id_status = 3,
                         fecha_nota = time,
-                        nota = ""
+                        nota = "",
+                        monto = val
                     };
                     DB.contexto.prc_date_pagos.Add(datePagoObj);
                 }
@@ -351,6 +354,8 @@ namespace PagosRenovacion
             dateRecordarInicio.DisplayDateStart = timetemp;
             datePago.DisplayDateStart = timetemp;
             dateRecordarHasta.DisplayDateStart = dateRecordarInicio.SelectedDate;
+
+            cmbxConcepto.ItemsSource = DB.contexto.prc_conceptos.ToList();
         }
 
         private void dateRecordarInicio_SelectedDateChanged(object sender, SelectionChangedEventArgs e)

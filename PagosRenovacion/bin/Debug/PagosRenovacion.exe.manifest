@@ -349,14 +349,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PagosRenovacion.exe" size="495616">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PagosRenovacion.exe" size="503808">
       <assemblyIdentity name="PagosRenovacion" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>dy4NA/0FdZDseDz7+d+Q25U6cx85N7t/7+3Q8CgD4LY=</dsig:DigestValue>
+        <dsig:DigestValue>nKgjpCs0GtVH10osIrBmHuGUpTG3iSidOw6b02nfs64=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

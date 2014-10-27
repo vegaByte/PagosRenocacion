@@ -203,3 +203,5 @@ C:\Users\RAUlll\Documents\GitHub\PagosRenocacion\PagosRenovacion\obj\Debug\RdlCo
 C:\Users\RAUlll\Documents\GitHub\PagosRenocacion\PagosRenovacion\obj\Debug\RdlCompile.compiled
 C:\Users\RAUlll\Documents\GitHub\PagosRenocacion\PagosRenovacion\obj\Debug\PagosRenovacion.exe.manifest
 C:\Users\RAUlll\Documents\GitHub\PagosRenocacion\PagosRenovacion\obj\Debug\PagosRenovacion.application
+C:\Users\RAUlll\Documents\GitHub\PagosRenocacion\PagosRenovacion\obj\Debug\Views\WindowServicios.baml
+C:\Users\RAUlll\Documents\GitHub\PagosRenocacion\PagosRenovacion\obj\Debug\Views\WindowServicios.g.cs

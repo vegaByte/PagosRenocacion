@@ -27,6 +27,7 @@ namespace PagosRenovacion
         WindowAltaContrato vtnAltaContrato;
         WindowRegistroContratos vtnReportContrato;
         WindowReportePagos vtnReportPagos;
+        WindowServicios vtnServiciosContratados;
         public Window1()
         {
             InitializeComponent();
@@ -106,6 +107,19 @@ namespace PagosRenovacion
             {
                 menuItemCategorias.IsEnabled = false;
             }
+        }
+
+        private void menuItemReporteServicios_Click(object sender, RoutedEventArgs e)
+        {
+            if (vtnServiciosContratados== null)
+            {
+                vtnServiciosContratados = new WindowServicios();
+                vtnServiciosContratados.ShowDialog();
+                vtnServiciosContratados.Unloaded += (s, a) => { vtnServiciosContratados = null; };
+            }
+            else
+                vtnServiciosContratados.Focus();
+
         }
     }
 }

@@ -10,8 +10,9 @@
         </Grid.RowDefinitions>
         <Menu HorizontalAlignment="Stretch" Grid.Row="0">
             <MenuItem x:Name="menuItemPagos" Header="_Pagos" Height="21" Click="menuItemPagos_Click" Width="52">
-                <MenuItem x:Name="menuItemNuevoPago" Header="_Programar nuevo pago" HorizontalAlignment="Left" Click="menuItemNuevoPago_Click"/>
-                <MenuItem x:Name="menuItemReportePago" Header="_Reporte de pagos" Click="menuItemReportePago_Click" HorizontalAlignment="Left" Margin="0,0,-1,0" Width="208" />
+                <MenuItem x:Name="menuItemNuevoPago" Header="_Nuevo servicio" Click="menuItemNuevoPago_Click"/>
+                <MenuItem x:Name="menuItemReporteServicios" Header="_Servicios Contratados" Click="menuItemReporteServicios_Click"/>
+                <MenuItem x:Name="menuItemReportePago" Header="_Reporte de pagos" Click="menuItemReportePago_Click" Width="200" />
             </MenuItem>
             <MenuItem x:Name="menuItemContratos" Header="_Contratos" Height="21">
                 <MenuItem x:Name="menuItemNuevoContrato" Header="_Programar nuevo contrato" HorizontalAlignment="Left" Click="menuItemNuevoContrato_Click"/>
