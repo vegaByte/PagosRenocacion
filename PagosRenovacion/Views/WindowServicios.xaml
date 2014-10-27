@@ -1,7 +1,7 @@
-﻿<Window x:Class="PagosRenovacion.WindowReportePagos"
+﻿<Window x:Class="PagosRenovacion.Views.WindowServicios"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Pagos y Renovación de Contratos- Reporte de Pagos" Height="auto" Width="888.383" WindowStartupLocation="CenterScreen" Language="Es-Mx"
+        Title="Pagos y Renovación de Contratos- Servicios" Height="auto" Width="888.383" WindowStartupLocation="CenterScreen" Language="Es-Mx"
         Icon="/PagosRenovacion;component/images/diseno_icono.png" Loaded="Window_Loaded" WindowState="Maximized">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -42,12 +42,11 @@
             <CheckBox x:Name="chbxEdicion" Content="Editar" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Bottom"
                       Checked="chbxEdicion_Checked" Unchecked="chbxEdicion_Unchecked" Grid.Column="1" TabIndex="5"/>
         </Grid>
-        <DataGrid GridLinesVisibility="None" x:Name="gridPagosProgramados" Grid.Column="1" Grid.Row="2" AutoGenerateColumns="False" IsReadOnly="True"
-                  ItemsSource="{Binding DatePagosList, Source={StaticResource DatePagosR}}" IsHitTestVisible="True" CellEditEnding="gridPagosProgramados_CellEditEnding">
+        <DataGrid GridLinesVisibility="None" x:Name="gridServiciosProgramados" Grid.Column="1" Grid.Row="2" AutoGenerateColumns="False" IsReadOnly="True"
+                  ItemsSource="{Binding PagosList, Source={StaticResource PagosR}}" IsHitTestVisible="True" CellEditEnding="gridPagosProgramados_CellEditEnding">
             <DataGrid.Columns>
-                <DataGridComboBoxColumn Header="Concepto" SelectedValueBinding="{Binding prc_pagos.fk_id_conceptos}" DisplayMemberPath="nombre" SelectedValuePath="id_conceptos" ItemsSource="{Binding Source={StaticResource ConceptosR}, Path=ConceptosList}"/>
-                <DataGridTextColumn Header="Monto" Binding="{Binding monto, StringFormat=\{0:C\}, Mode=TwoWay}"/>
-                <DataGridTextColumn Header="Fecha" Binding="{Binding fecha_nota, StringFormat=\{0:dd\/MMMM\/yyyy\}}" IsReadOnly="True"/>
+                <DataGridComboBoxColumn Header="Concepto" SelectedValueBinding="{Binding fk_id_conceptos}" DisplayMemberPath="nombre" SelectedValuePath="id_conceptos" ItemsSource="{Binding Source={StaticResource ConceptosR}, Path=ConceptosList}"/>
+                <DataGridTextColumn Header="Fecha Inicio" Binding="{Binding fecha_nota, StringFormat=\{0:dd\/MMMM\/yyyy\}}" IsReadOnly="True"/>
                 <DataGridComboBoxColumn Header="Status" SelectedValueBinding="{Binding fk_id_status}" DisplayMemberPath="nombre"
                                         SelectedValuePath="id_status" ItemsSource="{Binding Source={StaticResource StatusR}, Path=StatusList}">
                     <!--<DataGridComboBoxColumn.CellStyle>

@@ -158,5 +158,10 @@ namespace PagosRenovacion
         {
             busquedaTextbox.Focus();
         }
+
+        private void btnCancelarPago_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Cancelar servicio");
+        }
     }
 }

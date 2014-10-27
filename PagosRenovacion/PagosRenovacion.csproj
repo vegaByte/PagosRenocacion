@@ -230,6 +230,9 @@
     <Compile Include="Views\WindowReportePagos.xaml.cs">
       <DependentUpon>WindowReportePagos.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\WindowServicios.xaml.cs">
+      <DependentUpon>WindowServicios.xaml</DependentUpon>
+    </Compile>
     <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -263,6 +266,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\WindowReportePagos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WindowServicios.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
