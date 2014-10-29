@@ -275,3 +275,5 @@ C:\Users\CD03\Documents\GitHub\PagosRenocacion\PagosRenovacion\obj\Debug\RdlComp
 C:\Users\CD03\Documents\GitHub\PagosRenocacion\PagosRenovacion\obj\Debug\RdlCompile.compiled
 C:\Users\CD03\Documents\GitHub\PagosRenocacion\PagosRenovacion\obj\Debug\PagosRenovacion.exe.manifest
 C:\Users\CD03\Documents\GitHub\PagosRenocacion\PagosRenovacion\obj\Debug\PagosRenovacion.application
+C:\Users\CD03\Documents\GitHub\PagosRenocacion\PagosRenovacion\obj\Debug\Views\WindowCancelarServicio.baml
+C:\Users\CD03\Documents\GitHub\PagosRenocacion\PagosRenovacion\obj\Debug\Views\WindowCancelarServicio.g.cs

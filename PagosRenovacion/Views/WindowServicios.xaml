@@ -37,6 +37,7 @@
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,10" VerticalAlignment="Bottom">
                 <Button x:Name="btnNuevo" Content="{StaticResource iconAdd}" Style="{StaticResource myButtonIcon}" Click="btnNuevo_Click" ToolTip="Programar nuevo Pago" TabIndex="1"/>
                 <Button x:Name="btnPrint" Content="{StaticResource iconPrint}" Style="{StaticResource myButtonIcon}" Click="btnPrint_Click" TabIndex="2"/>
+                <Button x:Name="btnCancel" Content="{StaticResource iconDelete}" Style="{StaticResource myButtonIcon}" Click="btnCancel_Click" TabIndex="3" Margin="20,0,0,0"/>
             </StackPanel>
             <Image Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Source="/PagosRenovacion;component/images/IMCA IAP.png" Margin="0,0,0,10"/>
             <CheckBox x:Name="chbxEdicion" Content="Editar" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Bottom"

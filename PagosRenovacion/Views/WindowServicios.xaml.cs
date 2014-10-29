@@ -144,5 +144,17 @@ namespace PagosRenovacion.Views
         {
 
         }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            if (gridServiciosProgramados.SelectedIndex != -1)
+            {
+                prc_pagos servicio = gridServiciosProgramados.SelectedItem as prc_pagos;
+                WindowCancelarServicio vtnCancelar = new WindowCancelarServicio(servicio);
+                vtnCancelar.ShowDialog();
+            }
+            else
+                MessageBox.Show("Seleccione el servicio a cancelar.", "Servicio no seleccionado", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+        }
     }
 }

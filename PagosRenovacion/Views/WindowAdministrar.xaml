@@ -1,7 +1,7 @@
 ﻿<Window x:Class="PagosRenovacion.Views.WindowAdministrar"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Pagos y Renovación de Contratos- Administrar Categorías" Height="571" Width="510" 
+        Title="Pagos y Renovación de Contratos- Administrar Categorías" Height="600" Width="500" 
         Loaded="Window_Loaded" ResizeMode="CanMinimize"
         xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         WindowStartupLocation="CenterScreen" Icon="/PagosRenovacion;component/images/diseno_icono.png">

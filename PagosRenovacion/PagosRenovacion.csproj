@@ -218,6 +218,9 @@
     <Compile Include="Views\WindowAltaContrato.xaml.cs">
       <DependentUpon>WindowAltaContrato.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\WindowCancelarServicio.xaml.cs">
+      <DependentUpon>WindowCancelarServicio.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\WindowPrincipal.xaml.cs">
       <DependentUpon>WindowPrincipal.xaml</DependentUpon>
     </Compile>
@@ -250,6 +253,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\WindowAltaContrato.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WindowCancelarServicio.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

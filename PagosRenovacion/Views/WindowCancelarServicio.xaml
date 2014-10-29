@@ -1,0 +1,34 @@
+﻿<Window x:Class="PagosRenovacion.Views.WindowCancelarServicio"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Pagos y Renovación de Contratos- Cancelar Servicio" Height="600" Width="500" 
+        ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Icon="/PagosRenovacion;component/images/diseno_icono.png">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition />
+            <ColumnDefinition Width="30"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition />
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <StackPanel TextBlock.FontSize="16" Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
+            <StackPanel TextBlock.TextAlignment="Right">
+                <TextBlock>Concepto:</TextBlock>
+                <TextBlock>Tipo de Pago:</TextBlock>
+                <TextBlock>Fecha Inicial:</TextBlock>
+                <TextBlock>Fecha Terminación:</TextBlock>
+                <TextBlock Margin="0,20">Cancelar al día:</TextBlock>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock x:Name="txtServicio" Text="Servicio a cancelar" Margin="10,0,0,0" TextBlock.FontWeight="Bold"/>
+                <TextBlock x:Name="txtTipoPago" Text="tipoPago" Margin="10,0,0,0" TextBlock.FontWeight="Bold"/>
+                <TextBlock x:Name="txtFInicio" Text="fInicio" Margin="10,0,0,0" TextBlock.FontWeight="Bold"/>
+                <TextBlock x:Name="txtFTerminacion" Text="fTerminacion" Margin="10,0,0,0" TextBlock.FontWeight="Bold" TextBlock.Foreground="Red"/>
+                <DatePicker x:Name="dateCancel" Margin="10,14,0,0"></DatePicker>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
