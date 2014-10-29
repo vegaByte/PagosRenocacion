@@ -70,16 +70,14 @@ namespace PagosRenovacion
                          (a.fecha_nota >= dateInicio.SelectedDate && a.fecha_nota <= dateFin.SelectedDate) &&
                          a.fecha_nota.ToString("MMMM").Contains(busquedaTextbox.Text))).ToList();
                 }
-                miResultado = DB.contexto.prc_view_date_pagos.ToList();
+                //miResultado = DB.contexto.prc_view_date_pagos.ToList();
+
 
                 //var query = (from view in miResultado
-                //            join find in resultadoConsulta on view.fecha_nota equals find.fecha_nota
-                //            select view).ToList();
-                var query = (from view in miResultado
-                             join find in resultadoConsulta on view.fecha_nota+view.Expr1+view.nombre equals find.fecha_nota+find.prc_status.nombre+find.prc_pagos.prc_conceptos.nombre
-                             select view).ToList();
+                //             join find in resultadoConsulta on view.fecha_nota+view.Expr1+view.nombre equals find.fecha_nota+find.prc_status.nombre+find.prc_pagos.prc_conceptos.nombre
+                //             select view).ToList();
 
-                miResultadoReport = (query as IList);
+                //miResultadoReport = (query as IList);
                 return resultadoConsulta;
             }
             catch (Exception ex)

@@ -46,8 +46,8 @@
                   ItemsSource="{Binding DatePagosList, Source={StaticResource DatePagosR}}" IsHitTestVisible="True" CellEditEnding="gridPagosProgramados_CellEditEnding">
             <DataGrid.Columns>
                 <DataGridComboBoxColumn Header="Concepto" SelectedValueBinding="{Binding prc_pagos.fk_id_conceptos}" DisplayMemberPath="nombre" SelectedValuePath="id_conceptos" ItemsSource="{Binding Source={StaticResource ConceptosR}, Path=ConceptosList}"/>
-                <DataGridTextColumn Header="Monto" Binding="{Binding monto, StringFormat=\{0:C\}, Mode=TwoWay}"/>
-                <DataGridTextColumn Header="Fecha" Binding="{Binding fecha_nota, StringFormat=\{0:dd\/MMMM\/yyyy\}}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Monto" Binding="{Binding monto, StringFormat=\{0:C\}}"/>
+                <DataGridTextColumn Header="Fecha" Binding="{Binding fecha_nota, StringFormat=\{0:d\}}" IsReadOnly="True"/>
                 <DataGridComboBoxColumn Header="Status" SelectedValueBinding="{Binding fk_id_status}" DisplayMemberPath="nombre"
                                         SelectedValuePath="id_status" ItemsSource="{Binding Source={StaticResource StatusR}, Path=StatusList}">
                     <!--<DataGridComboBoxColumn.CellStyle>

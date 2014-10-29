@@ -40,12 +40,12 @@
     <EntitySetMapping Name="prc_date_pagos">
       <EntityTypeMapping TypeName="PRCModel.prc_date_pagos">
         <MappingFragment StoreEntitySet="prc_date_pagos">
+          <ScalarProperty Name="monto" ColumnName="monto" />
           <ScalarProperty Name="id_date_pagos" ColumnName="id_date_pagos" />
           <ScalarProperty Name="fecha_nota" ColumnName="fecha_nota" />
           <ScalarProperty Name="nota" ColumnName="nota" />
           <ScalarProperty Name="fk_id_pagos" ColumnName="fk_id_pagos" />
           <ScalarProperty Name="fk_id_status" ColumnName="fk_id_status" />
-          <ScalarProperty Name="monto" ColumnName="monto" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -64,6 +64,7 @@
     <EntitySetMapping Name="prc_pagos">
       <EntityTypeMapping TypeName="PRCModel.prc_pagos">
         <MappingFragment StoreEntitySet="prc_pagos">
+          <ScalarProperty Name="activo" ColumnName="activo" />
           <ScalarProperty Name="id_pagos" ColumnName="id_pagos" />
           <ScalarProperty Name="date_inicio" ColumnName="date_inicio" />
           <ScalarProperty Name="date_final" ColumnName="date_final" />
