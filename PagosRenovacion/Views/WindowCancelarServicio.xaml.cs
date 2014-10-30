@@ -45,9 +45,20 @@ namespace PagosRenovacion.Views
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            DateTime timetemp = Convert.ToDateTime(DateTime.Today, new CultureInfo("es-ES"));
-            dateCancel.SelectedDate = timetemp;
+
+            List<prc_date_pagos> pagos = DB.contexto.prc_date_pagos.Where(a => a.fk_id_pagos == myservicio.id_pagos && a.fk_id_status==3).ToList();
+            pagos.OrderBy(a=>a.fecha_nota);
+            prc_date_pagos ultimoPago = pagos.First();
+            DateTime ultimaFecha = ultimoPago.fecha_nota;
+            //DateTime timetemp = Convert.ToDateTime(DateTime.Today, new CultureInfo("es-ES"));
+            //dateCancel.SelectedDate = timetemp;
+            dateCancel.DisplayDateStart = ultimaFecha;
+            dateCancel.SelectedDate = ultimaFecha;
             refrescaGridPagosEliminar();
+
+
+
+
         }
         private bool firstOpen = true;
         private void dateCancel_CalendarOpened(object sender, RoutedEventArgs e)
@@ -67,7 +78,7 @@ namespace PagosRenovacion.Views
         {
             if (val.ValidaDatePickerNoNull(dateCancel))
             {
-                var vtn = MessageBox.Show("Realmente desea cancelar el servicio \""+myservicio.prc_conceptos.nombre+"\" con fecha de cancelación el día \""+dateCancel.SelectedDate.ToString().Substring(0,10)+"\"?\nADVERTENCIA: Los pagos programados con fecha posterior a la fecha de cancelación serán eliminados.", "Advertencia", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                var vtn = MessageBox.Show("Realmente desea cancelar el servicio \""+myservicio.prc_conceptos.nombre+"\" con fecha de cancelación el día \""+dateCancel.SelectedDate.ToString().Substring(0,10)+"\"?\n\nADVERTENCIA: Los pagos programados con fecha posterior a la fecha de cancelación serán eliminados.", "Advertencia", MessageBoxButton.YesNo, MessageBoxImage.Question);
                 if (vtn == MessageBoxResult.Yes)
                 {
                     List<prc_date_pagos> pagos = DB.contexto.prc_date_pagos.Where(a => a.fecha_nota > dateCancel.SelectedDate && a.fk_id_pagos == myservicio.id_pagos).ToList();
