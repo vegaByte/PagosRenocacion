@@ -129,6 +129,7 @@ namespace PagosRenovacion
                         fk_id_tipopagos = (int)cmbxTipoPago.SelectedValue,
                         fk_id_conceptos = (int)cmbxConcepto.SelectedValue,
                         fk_id_usuarios = (App.Current.Resources["UsuarioActualR"] as UsuarioActual).UserName,
+                        activo = true
                         
                     };
                     DB.contexto.prc_pagos.Add(pago);

@@ -50,7 +50,7 @@
                 <DataGridTextColumn Header="    Fecha Inicio    " Binding="{Binding date_inicio, StringFormat=\{0:d\}}" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Fecha Terminación" Binding="{Binding date_final, StringFormat=\{0:d\}}" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Tipo de Pago" Binding="{Binding prc_tipopagos.nombre}" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Activo" Binding="{Binding activo}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Activo" Binding="{Binding activo, Mode=TwoWay}" IsReadOnly="True" />
                 
             </DataGrid.Columns>
         </DataGrid>
