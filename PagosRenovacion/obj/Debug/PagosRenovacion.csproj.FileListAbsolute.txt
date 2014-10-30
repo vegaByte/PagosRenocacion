@@ -277,3 +277,5 @@ C:\Users\CD03\Documents\GitHub\PagosRenocacion\PagosRenovacion\obj\Debug\PagosRe
 C:\Users\CD03\Documents\GitHub\PagosRenocacion\PagosRenovacion\obj\Debug\PagosRenovacion.application
 C:\Users\CD03\Documents\GitHub\PagosRenocacion\PagosRenovacion\obj\Debug\Views\WindowCancelarServicio.baml
 C:\Users\CD03\Documents\GitHub\PagosRenocacion\PagosRenovacion\obj\Debug\Views\WindowCancelarServicio.g.cs
+C:\Users\RAUlll\Documents\GitHub\PagosRenocacion\PagosRenovacion\obj\Debug\Views\WindowCancelarServicio.baml
+C:\Users\RAUlll\Documents\GitHub\PagosRenocacion\PagosRenovacion\obj\Debug\Views\WindowCancelarServicio.g.cs
