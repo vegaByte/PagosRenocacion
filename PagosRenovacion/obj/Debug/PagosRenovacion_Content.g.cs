@@ -8,6 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("scriptbd/dbpagoscontratos.sql")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("scriptbd/create%20db.sql")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("scriptbd/insert_actividades.sql")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("scriptbd/insert_status.sql")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("scriptbd/insert_tipopagos.sql")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("scriptbd/insert_usuarios.sql")]
 
 

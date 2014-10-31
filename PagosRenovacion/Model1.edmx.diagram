@@ -15,7 +15,7 @@
         <EntityTypeShape EntityType="PRCModel.prc_tipopagos" Width="1.5" PointX="3.75" PointY="12" IsExpanded="true" />
         <EntityTypeShape EntityType="PRCModel.prc_usuarios" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="PRCModel.prc_view_date_contratos" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PRCModel.prc_view_date_pagos" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PRCModel.prc_view_date_pagos" Width="1.75" PointX="8.75" PointY="0.75" IsExpanded="true" />
         <AssociationConnector Association="PRCModel.FK_prc_contratos_prc_actividades" ManuallyRouted="false" />
         <AssociationConnector Association="PRCModel.FK_prc_pagos_prc_conceptos" ManuallyRouted="false" />
         <AssociationConnector Association="PRCModel.FK_prc_contratos_prc_usuarios" ManuallyRouted="false" />

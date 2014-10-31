@@ -104,7 +104,6 @@
       <EntityTypeMapping TypeName="PRCModel.prc_view_date_pagos">
         <MappingFragment StoreEntitySet="prc_view_date_pagos">
           <ScalarProperty Name="nombre" ColumnName="nombre" />
-          <ScalarProperty Name="monto" ColumnName="monto" />
           <ScalarProperty Name="fecha_nota" ColumnName="fecha_nota" />
           <ScalarProperty Name="Expr1" ColumnName="Expr1" />
           <ScalarProperty Name="nota" ColumnName="nota" />

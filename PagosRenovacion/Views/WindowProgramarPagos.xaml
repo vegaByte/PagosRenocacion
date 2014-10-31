@@ -20,7 +20,9 @@
         <Grid Grid.Column="1" Grid.Row="1">
             <StackPanel Margin="0,20,0,0">
                 <Label Content="Concepto de pago:" FontSize="16"/>
-                <ComboBox x:Name="cmbxConcepto" FontSize="16" ItemsSource="{Binding ConceptosList, Source={StaticResource ConceptosR}, Mode=TwoWay}" DisplayMemberPath="nombre" SelectedValuePath="id_conceptos" TabIndex="-1"/>
+                <ComboBox x:Name="cmbxConcepto" FontSize="16" ItemsSource="{Binding ConceptosList, Source={StaticResource ConceptosR}, Mode=TwoWay}" DisplayMemberPath="nombre" SelectedValuePath="id_conceptos" TabIndex="-2"/>
+                <ComboBox x:Name="cmbxActividad" FontSize="16" ItemsSource="{Binding ActividadesList, Source={StaticResource ActividadesR}, Mode=TwoWay}" DisplayMemberPath="nombre" SelectedValuePath="id_actividades" TabIndex="-1"/>
+
                 <Label Content="Monto de pago:" FontSize="16"/>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text=" $ " FontWeight="Light" TextAlignment="Center" FontSize="20" Background="#02543B" Foreground="White"/>

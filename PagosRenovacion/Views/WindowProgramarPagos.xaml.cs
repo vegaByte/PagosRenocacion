@@ -129,7 +129,8 @@ namespace PagosRenovacion
                         fk_id_tipopagos = (int)cmbxTipoPago.SelectedValue,
                         fk_id_conceptos = (int)cmbxConcepto.SelectedValue,
                         fk_id_usuarios = (App.Current.Resources["UsuarioActualR"] as UsuarioActual).UserName,
-                        activo = true
+                        activo = true,
+                        fk_id_actividades = 1
                         
                     };
                     DB.contexto.prc_pagos.Add(pago);
@@ -149,7 +150,7 @@ namespace PagosRenovacion
                                     fk_id_pagos = DB.contexto.prc_pagos.Max(a => a.id_pagos),
                                     fk_id_status = 3,
                                     fecha_nota = datePago.SelectedDate.Value,
-                                    monto = val
+                                    monto = val,
                                 };
                                 cadenaMostrar += datePago.SelectedDate.Value.ToString();
                                 if (cadenaMostrar.Equals(""))

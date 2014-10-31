@@ -430,7 +430,13 @@
   <ItemGroup>
     <Resource Include="images\iconos\icon_app.ico" />
     <Resource Include="icon_app.ico" />
-    <Content Include="ScriptBD\dbpagoscontratos.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ScriptBD\create db.sql" />
+    <Content Include="ScriptBD\insert_actividades.sql" />
+    <Content Include="ScriptBD\insert_status.sql" />
+    <Content Include="ScriptBD\insert_tipopagos.sql" />
+    <Content Include="ScriptBD\insert_usuarios.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

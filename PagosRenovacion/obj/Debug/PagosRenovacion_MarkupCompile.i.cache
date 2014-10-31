@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\RAUlll\Documents\GitHub\PagosRenocacion\PagosRenovacion\obj\Debug\
+C:\Users\CD03\Documents\GitHub\PagosRenocacion\PagosRenovacion\obj\Debug\
 PagosRenovacion
 none
 false
 DEBUG;TRACE
-C:\Users\RAUlll\Documents\GitHub\PagosRenocacion\PagosRenovacion\App.xaml
+C:\Users\CD03\Documents\GitHub\PagosRenocacion\PagosRenovacion\App.xaml
 9515336612
-1-412859285
-53-96097198
-332004454407
+5-1035657138
+53-1621181903
+33-673072527
 Views\MainWindow.xaml;Views\WindowAdministrar.xaml;Views\WindowAltaContrato.xaml;Views\WindowCancelarServicio.xaml;Views\WindowPrincipal.xaml;Views\WindowProgramarPagos.xaml;Views\WindowRegistroContratos.xaml;Views\WindowReportePagos.xaml;Views\WindowServicios.xaml;
 
 False

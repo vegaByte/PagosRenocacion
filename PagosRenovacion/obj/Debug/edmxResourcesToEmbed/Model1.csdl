@@ -117,7 +117,6 @@
       <PropertyRef Name="Expr1" />
     </Key>
     <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="monto" Type="Double" />
     <Property Name="fecha_nota" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="Expr1" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="nota" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />

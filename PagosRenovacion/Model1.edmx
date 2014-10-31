@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="PRCModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="PRCModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="prc_actividades">
           <Key>
             <PropertyRef Name="id_actividades" />
@@ -117,7 +117,6 @@ advertencia 6002: La tabla o vista 'dbpagoscontratos.dbo.prc_view_date_pagos' no
             <PropertyRef Name="Expr1" />
           </Key>
           <Property Name="nombre" Type="text" Nullable="false" />
-          <Property Name="monto" Type="float" />
           <Property Name="fecha_nota" Type="datetime" Nullable="false" />
           <Property Name="Expr1" Type="varchar" MaxLength="45" Nullable="false" />
           <Property Name="nota" Type="varchar" MaxLength="120" />
@@ -264,7 +263,6 @@ advertencia 6002: La tabla o vista 'dbpagoscontratos.dbo.prc_view_date_pagos' no
           <EntitySet Name="prc_view_date_pagos" EntityType="Self.prc_view_date_pagos" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [prc_view_date_pagos].[nombre] AS [nombre], 
-    [prc_view_date_pagos].[monto] AS [monto], 
     [prc_view_date_pagos].[fecha_nota] AS [fecha_nota], 
     [prc_view_date_pagos].[Expr1] AS [Expr1], 
     [prc_view_date_pagos].[nota] AS [nota]
@@ -432,7 +430,6 @@ advertencia 6002: La tabla o vista 'dbpagoscontratos.dbo.prc_view_date_pagos' no
             <PropertyRef Name="Expr1" />
           </Key>
           <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="monto" Type="Double" />
           <Property Name="fecha_nota" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Expr1" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="nota" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
@@ -731,7 +728,6 @@ advertencia 6002: La tabla o vista 'dbpagoscontratos.dbo.prc_view_date_pagos' no
             <EntityTypeMapping TypeName="PRCModel.prc_view_date_pagos">
               <MappingFragment StoreEntitySet="prc_view_date_pagos">
                 <ScalarProperty Name="nombre" ColumnName="nombre" />
-                <ScalarProperty Name="monto" ColumnName="monto" />
                 <ScalarProperty Name="fecha_nota" ColumnName="fecha_nota" />
                 <ScalarProperty Name="Expr1" ColumnName="Expr1" />
                 <ScalarProperty Name="nota" ColumnName="nota" />

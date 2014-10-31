@@ -7,14 +7,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="PagosRenovacion.exe.manifest" size="42447">
+    <dependentAssembly dependencyType="install" codebase="PagosRenovacion.exe.manifest" size="44061">
       <assemblyIdentity name="PagosRenovacion.exe" version="1.0.0.8" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>VDGmSjHzSC7h26+ZyBo87auehq0BsEI14aFyusG5S4w=</dsig:DigestValue>
+        <dsig:DigestValue>9UbIDfrZaKBy7sNoTk4Nli4G4nLVzpkYTLX2cDqjBtI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

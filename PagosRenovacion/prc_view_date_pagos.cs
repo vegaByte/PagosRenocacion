@@ -15,7 +15,6 @@ namespace PagosRenovacion
     public partial class prc_view_date_pagos
     {
         public string nombre { get; set; }
-        public Nullable<double> monto { get; set; }
         public System.DateTime fecha_nota { get; set; }
         public string Expr1 { get; set; }
         public string nota { get; set; }
