@@ -49,21 +49,10 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="prc_date_pagos_semanales">
-      <EntityTypeMapping TypeName="PRCModel.prc_date_pagos_semanales">
-        <MappingFragment StoreEntitySet="prc_date_pagos_semanales">
-          <ScalarProperty Name="id_date_pagos_semanales" ColumnName="id_date_pagos_semanales" />
-          <ScalarProperty Name="dia_nota" ColumnName="dia_nota" />
-          <ScalarProperty Name="nota" ColumnName="nota" />
-          <ScalarProperty Name="fk_id_pagos" ColumnName="fk_id_pagos" />
-          <ScalarProperty Name="fk_id_status" ColumnName="fk_id_status" />
-          <ScalarProperty Name="fecha_nota" ColumnName="fecha_nota" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="prc_pagos">
       <EntityTypeMapping TypeName="PRCModel.prc_pagos">
         <MappingFragment StoreEntitySet="prc_pagos">
+          <ScalarProperty Name="fk_id_actividades" ColumnName="fk_id_actividades" />
           <ScalarProperty Name="activo" ColumnName="activo" />
           <ScalarProperty Name="id_pagos" ColumnName="id_pagos" />
           <ScalarProperty Name="date_inicio" ColumnName="date_inicio" />
@@ -119,6 +108,17 @@
           <ScalarProperty Name="fecha_nota" ColumnName="fecha_nota" />
           <ScalarProperty Name="Expr1" ColumnName="Expr1" />
           <ScalarProperty Name="nota" ColumnName="nota" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="prc_recargos">
+      <EntityTypeMapping TypeName="PRCModel.prc_recargos">
+        <MappingFragment StoreEntitySet="prc_recargos">
+          <ScalarProperty Name="path_evidencia" ColumnName="path_evidencia" />
+          <ScalarProperty Name="monto" ColumnName="monto" />
+          <ScalarProperty Name="nota" ColumnName="nota" />
+          <ScalarProperty Name="fk_id_date_pagos" ColumnName="fk_id_date_pagos" />
+          <ScalarProperty Name="id_recargos" ColumnName="id_recargos" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

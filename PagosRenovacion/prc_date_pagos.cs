@@ -14,6 +14,11 @@ namespace PagosRenovacion
     
     public partial class prc_date_pagos
     {
+        public prc_date_pagos()
+        {
+            this.prc_recargos = new HashSet<prc_recargos>();
+        }
+    
         public int id_date_pagos { get; set; }
         public System.DateTime fecha_nota { get; set; }
         public string nota { get; set; }
@@ -23,5 +28,6 @@ namespace PagosRenovacion
     
         public virtual prc_pagos prc_pagos { get; set; }
         public virtual prc_status prc_status { get; set; }
+        public virtual ICollection<prc_recargos> prc_recargos { get; set; }
     }
 }

@@ -7,6 +7,7 @@
     <Property Name="id_actividades" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nombre" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="prc_contratos" Relationship="Self.FK_prc_contratos_prc_actividades" FromRole="prc_actividades" ToRole="prc_contratos" />
+    <NavigationProperty Name="prc_pagos" Relationship="PRCModel.FK_prc_pagos_prc_actividades" FromRole="prc_actividades" ToRole="prc_pagos" />
   </EntityType>
   <EntityType Name="prc_conceptos">
     <Key>
@@ -50,19 +51,7 @@
     <NavigationProperty Name="prc_pagos" Relationship="Self.FK_prc_date_pagos_prc_pagos" FromRole="prc_date_pagos" ToRole="prc_pagos" />
     <NavigationProperty Name="prc_status" Relationship="Self.FK_prc_date_pagos_prc_status" FromRole="prc_date_pagos" ToRole="prc_status" />
     <Property Name="monto" Type="Double" />
-  </EntityType>
-  <EntityType Name="prc_date_pagos_semanales">
-    <Key>
-      <PropertyRef Name="id_date_pagos_semanales" />
-    </Key>
-    <Property Name="id_date_pagos_semanales" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="dia_nota" Type="Int32" Nullable="false" />
-    <Property Name="nota" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
-    <Property Name="fk_id_pagos" Type="Int32" Nullable="false" />
-    <Property Name="fk_id_status" Type="Int32" Nullable="false" />
-    <Property Name="fecha_nota" Type="DateTime" Nullable="false" Precision="3" />
-    <NavigationProperty Name="prc_pagos" Relationship="Self.FK_prc_date_pagos_semanales_prc_pagos" FromRole="prc_date_pagos_semanales" ToRole="prc_pagos" />
-    <NavigationProperty Name="prc_status" Relationship="Self.FK_prc_date_pagos_semanales_prc_status" FromRole="prc_date_pagos_semanales" ToRole="prc_status" />
+    <NavigationProperty Name="prc_recargos" Relationship="PRCModel.fk_id_date_pagos" FromRole="prc_date_pagos" ToRole="prc_recargos" />
   </EntityType>
   <EntityType Name="prc_pagos">
     <Key>
@@ -76,10 +65,11 @@
     <Property Name="fk_id_usuarios" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="prc_conceptos" Relationship="Self.FK_prc_pagos_prc_conceptos" FromRole="prc_pagos" ToRole="prc_conceptos" />
     <NavigationProperty Name="prc_date_pagos" Relationship="Self.FK_prc_date_pagos_prc_pagos" FromRole="prc_pagos" ToRole="prc_date_pagos" />
-    <NavigationProperty Name="prc_date_pagos_semanales" Relationship="Self.FK_prc_date_pagos_semanales_prc_pagos" FromRole="prc_pagos" ToRole="prc_date_pagos_semanales" />
     <NavigationProperty Name="prc_tipopagos" Relationship="Self.FK_prc_pagos_prc_tipopagos" FromRole="prc_pagos" ToRole="prc_tipopagos" />
     <NavigationProperty Name="prc_usuarios" Relationship="Self.FK_prc_pagos_prc_usuarios" FromRole="prc_pagos" ToRole="prc_usuarios" />
     <Property Name="activo" Type="Boolean" />
+    <Property Name="fk_id_actividades" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="prc_actividades" Relationship="PRCModel.FK_prc_pagos_prc_actividades" FromRole="prc_pagos" ToRole="prc_actividades" />
   </EntityType>
   <EntityType Name="prc_status">
     <Key>
@@ -88,7 +78,6 @@
     <Property Name="id_status" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nombre" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="prc_date_pagos" Relationship="Self.FK_prc_date_pagos_prc_status" FromRole="prc_status" ToRole="prc_date_pagos" />
-    <NavigationProperty Name="prc_date_pagos_semanales" Relationship="Self.FK_prc_date_pagos_semanales_prc_status" FromRole="prc_status" ToRole="prc_date_pagos_semanales" />
   </EntityType>
   <EntityType Name="prc_tipopagos">
     <Key>
@@ -205,30 +194,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_prc_date_pagos_semanales_prc_pagos">
-    <End Role="prc_pagos" Type="Self.prc_pagos" Multiplicity="1" />
-    <End Role="prc_date_pagos_semanales" Type="Self.prc_date_pagos_semanales" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="prc_pagos">
-        <PropertyRef Name="id_pagos" />
-      </Principal>
-      <Dependent Role="prc_date_pagos_semanales">
-        <PropertyRef Name="fk_id_pagos" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_prc_date_pagos_semanales_prc_status">
-    <End Role="prc_status" Type="Self.prc_status" Multiplicity="1" />
-    <End Role="prc_date_pagos_semanales" Type="Self.prc_date_pagos_semanales" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="prc_status">
-        <PropertyRef Name="id_status" />
-      </Principal>
-      <Dependent Role="prc_date_pagos_semanales">
-        <PropertyRef Name="fk_id_status" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_prc_pagos_prc_tipopagos">
     <End Role="prc_tipopagos" Type="Self.prc_tipopagos" Multiplicity="1" />
     <End Role="prc_pagos" Type="Self.prc_pagos" Multiplicity="*" />
@@ -259,7 +224,6 @@
     <EntitySet Name="prc_contratos" EntityType="Self.prc_contratos" />
     <EntitySet Name="prc_date_contratos" EntityType="Self.prc_date_contratos" />
     <EntitySet Name="prc_date_pagos" EntityType="Self.prc_date_pagos" />
-    <EntitySet Name="prc_date_pagos_semanales" EntityType="Self.prc_date_pagos_semanales" />
     <EntitySet Name="prc_pagos" EntityType="Self.prc_pagos" />
     <EntitySet Name="prc_status" EntityType="Self.prc_status" />
     <EntitySet Name="prc_tipopagos" EntityType="Self.prc_tipopagos" />
@@ -290,14 +254,6 @@
       <End Role="prc_status" EntitySet="prc_status" />
       <End Role="prc_date_pagos" EntitySet="prc_date_pagos" />
     </AssociationSet>
-    <AssociationSet Name="FK_prc_date_pagos_semanales_prc_pagos" Association="Self.FK_prc_date_pagos_semanales_prc_pagos">
-      <End Role="prc_pagos" EntitySet="prc_pagos" />
-      <End Role="prc_date_pagos_semanales" EntitySet="prc_date_pagos_semanales" />
-    </AssociationSet>
-    <AssociationSet Name="FK_prc_date_pagos_semanales_prc_status" Association="Self.FK_prc_date_pagos_semanales_prc_status">
-      <End Role="prc_status" EntitySet="prc_status" />
-      <End Role="prc_date_pagos_semanales" EntitySet="prc_date_pagos_semanales" />
-    </AssociationSet>
     <AssociationSet Name="FK_prc_pagos_prc_tipopagos" Association="Self.FK_prc_pagos_prc_tipopagos">
       <End Role="prc_tipopagos" EntitySet="prc_tipopagos" />
       <End Role="prc_pagos" EntitySet="prc_pagos" />
@@ -306,5 +262,49 @@
       <End Role="prc_usuarios" EntitySet="prc_usuarios" />
       <End Role="prc_pagos" EntitySet="prc_pagos" />
     </AssociationSet>
+    <EntitySet Name="prc_recargos" EntityType="PRCModel.prc_recargos" />
+    <AssociationSet Name="FK_prc_pagos_prc_actividades" Association="PRCModel.FK_prc_pagos_prc_actividades">
+      <End Role="prc_actividades" EntitySet="prc_actividades" />
+      <End Role="prc_pagos" EntitySet="prc_pagos" />
+    </AssociationSet>
+    <AssociationSet Name="fk_id_date_pagos" Association="PRCModel.fk_id_date_pagos">
+      <End Role="prc_date_pagos" EntitySet="prc_date_pagos" />
+      <End Role="prc_recargos" EntitySet="prc_recargos" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="prc_recargos">
+    <Key>
+      <PropertyRef Name="id_recargos" />
+    </Key>
+    <Property Name="id_recargos" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_id_date_pagos" Type="Int32" Nullable="false" />
+    <Property Name="nota" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="monto" Type="Double" Nullable="false" />
+    <Property Name="path_evidencia" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="prc_date_pagos" Relationship="PRCModel.fk_id_date_pagos" FromRole="prc_recargos" ToRole="prc_date_pagos" />
+  </EntityType>
+  <Association Name="FK_prc_pagos_prc_actividades">
+    <End Type="PRCModel.prc_actividades" Role="prc_actividades" Multiplicity="1" />
+    <End Type="PRCModel.prc_pagos" Role="prc_pagos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="prc_actividades">
+        <PropertyRef Name="id_actividades" />
+      </Principal>
+      <Dependent Role="prc_pagos">
+        <PropertyRef Name="fk_id_actividades" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_id_date_pagos">
+    <End Type="PRCModel.prc_date_pagos" Role="prc_date_pagos" Multiplicity="1" />
+    <End Type="PRCModel.prc_recargos" Role="prc_recargos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="prc_date_pagos">
+        <PropertyRef Name="id_date_pagos" />
+      </Principal>
+      <Dependent Role="prc_recargos">
+        <PropertyRef Name="fk_id_date_pagos" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

@@ -17,11 +17,13 @@ namespace PagosRenovacion
         public prc_actividades()
         {
             this.prc_contratos = new HashSet<prc_contratos>();
+            this.prc_pagos = new HashSet<prc_pagos>();
         }
     
         public int id_actividades { get; set; }
         public string nombre { get; set; }
     
         public virtual ICollection<prc_contratos> prc_contratos { get; set; }
+        public virtual ICollection<prc_pagos> prc_pagos { get; set; }
     }
 }

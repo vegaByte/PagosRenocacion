@@ -12,16 +12,14 @@ namespace PagosRenovacion
     using System;
     using System.Collections.Generic;
     
-    public partial class prc_date_pagos_semanales
+    public partial class prc_recargos
     {
-        public int id_date_pagos_semanales { get; set; }
-        public int dia_nota { get; set; }
+        public int id_recargos { get; set; }
+        public int fk_id_date_pagos { get; set; }
         public string nota { get; set; }
-        public int fk_id_pagos { get; set; }
-        public int fk_id_status { get; set; }
-        public System.DateTime fecha_nota { get; set; }
+        public double monto { get; set; }
+        public string path_evidencia { get; set; }
     
-        public virtual prc_pagos prc_pagos { get; set; }
-        public virtual prc_status prc_status { get; set; }
+        public virtual prc_date_pagos prc_date_pagos { get; set; }
     }
 }

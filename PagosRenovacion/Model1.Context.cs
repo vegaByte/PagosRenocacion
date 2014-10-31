@@ -30,12 +30,12 @@ namespace PagosRenovacion
         public virtual DbSet<prc_contratos> prc_contratos { get; set; }
         public virtual DbSet<prc_date_contratos> prc_date_contratos { get; set; }
         public virtual DbSet<prc_date_pagos> prc_date_pagos { get; set; }
-        public virtual DbSet<prc_date_pagos_semanales> prc_date_pagos_semanales { get; set; }
         public virtual DbSet<prc_pagos> prc_pagos { get; set; }
         public virtual DbSet<prc_status> prc_status { get; set; }
         public virtual DbSet<prc_tipopagos> prc_tipopagos { get; set; }
         public virtual DbSet<prc_usuarios> prc_usuarios { get; set; }
         public virtual DbSet<prc_view_date_contratos> prc_view_date_contratos { get; set; }
         public virtual DbSet<prc_view_date_pagos> prc_view_date_pagos { get; set; }
+        public virtual DbSet<prc_recargos> prc_recargos { get; set; }
     }
 }

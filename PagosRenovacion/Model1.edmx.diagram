@@ -8,9 +8,8 @@
         <EntityTypeShape EntityType="PRCModel.prc_actividades" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
         <EntityTypeShape EntityType="PRCModel.prc_conceptos" Width="1.5" PointX="3.75" PointY="1.625" IsExpanded="true" />
         <EntityTypeShape EntityType="PRCModel.prc_contratos" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="PRCModel.prc_date_contratos" Width="1.5" PointX="5.25" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PRCModel.prc_date_contratos" Width="2.25" PointX="5.25" PointY="8.625" IsExpanded="true" />
         <EntityTypeShape EntityType="PRCModel.prc_date_pagos" Width="1.5" PointX="8.25" PointY="4.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="PRCModel.prc_date_pagos_semanales" Width="1.5" PointX="11.25" PointY="4.375" IsExpanded="true" />
         <EntityTypeShape EntityType="PRCModel.prc_pagos" Width="1.5" PointX="6" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="PRCModel.prc_status" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="PRCModel.prc_tipopagos" Width="1.5" PointX="3.75" PointY="12" IsExpanded="true" />
@@ -23,10 +22,11 @@
         <AssociationConnector Association="PRCModel.FK_prc_date_contratos_prc_contratos" ManuallyRouted="false" />
         <AssociationConnector Association="PRCModel.FK_prc_date_pagos_prc_pagos" ManuallyRouted="false" />
         <AssociationConnector Association="PRCModel.FK_prc_date_pagos_prc_status" ManuallyRouted="false" />
-        <AssociationConnector Association="PRCModel.FK_prc_date_pagos_semanales_prc_pagos" ManuallyRouted="false" />
-        <AssociationConnector Association="PRCModel.FK_prc_date_pagos_semanales_prc_status" ManuallyRouted="false" />
         <AssociationConnector Association="PRCModel.FK_prc_pagos_prc_tipopagos" ManuallyRouted="false" />
         <AssociationConnector Association="PRCModel.FK_prc_pagos_prc_usuarios" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="PRCModel.prc_recargos" Width="1.5" PointX="10.5" PointY="7.75" />
+        <AssociationConnector Association="PRCModel.FK_prc_pagos_prc_actividades" />
+        <AssociationConnector Association="PRCModel.fk_id_date_pagos" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

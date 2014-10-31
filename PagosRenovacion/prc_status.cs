@@ -17,13 +17,11 @@ namespace PagosRenovacion
         public prc_status()
         {
             this.prc_date_pagos = new HashSet<prc_date_pagos>();
-            this.prc_date_pagos_semanales = new HashSet<prc_date_pagos_semanales>();
         }
     
         public int id_status { get; set; }
         public string nombre { get; set; }
     
         public virtual ICollection<prc_date_pagos> prc_date_pagos { get; set; }
-        public virtual ICollection<prc_date_pagos_semanales> prc_date_pagos_semanales { get; set; }
     }
 }

@@ -165,10 +165,10 @@
     <Compile Include="prc_date_pagos.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="prc_date_pagos_semanales.cs">
+    <Compile Include="prc_pagos.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="prc_pagos.cs">
+    <Compile Include="prc_recargos.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="prc_status.cs">
@@ -191,7 +191,6 @@
     <Compile Include="ViewModels\ConceptosVM.cs" />
     <Compile Include="ViewModels\ContratosVM.cs" />
     <Compile Include="ViewModels\DateContratosVM.cs" />
-    <Compile Include="ViewModels\DatePagosSemanalesVM.cs" />
     <Compile Include="ViewModels\DatePagosVM.cs" />
     <Compile Include="ViewModels\PagosVM.cs" />
     <Compile Include="ViewModels\StatusVM.cs" />

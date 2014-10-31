@@ -17,7 +17,6 @@ namespace PagosRenovacion
         public prc_pagos()
         {
             this.prc_date_pagos = new HashSet<prc_date_pagos>();
-            this.prc_date_pagos_semanales = new HashSet<prc_date_pagos_semanales>();
         }
     
         public int id_pagos { get; set; }
@@ -27,11 +26,12 @@ namespace PagosRenovacion
         public int fk_id_tipopagos { get; set; }
         public string fk_id_usuarios { get; set; }
         public Nullable<bool> activo { get; set; }
+        public int fk_id_actividades { get; set; }
     
         public virtual prc_conceptos prc_conceptos { get; set; }
         public virtual ICollection<prc_date_pagos> prc_date_pagos { get; set; }
-        public virtual ICollection<prc_date_pagos_semanales> prc_date_pagos_semanales { get; set; }
         public virtual prc_tipopagos prc_tipopagos { get; set; }
         public virtual prc_usuarios prc_usuarios { get; set; }
+        public virtual prc_actividades prc_actividades { get; set; }
     }
 }

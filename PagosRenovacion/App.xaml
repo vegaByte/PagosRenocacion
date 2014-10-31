@@ -19,7 +19,6 @@
         <viewmodels:ViewDatePagosVM x:Key="ViewDatePagosR" />
         <viewmodels:ViewDateContratosVM x:Key="ViewDateContratosR"/>
         <views:WindowAdministrar x:Key="ViewAdministrar"/>
-        <viewmodels:DatePagosSemanalesVM x:Key="DatePagosSemanalesR"/>
         <commands:UsuarioActual x:Key="UsuarioActualR"/>
         <Image x:Key="iconPrint" Source="images/iconos/Print.png"/>
         <Image x:Key="iconEdit" Source="images/iconos/Edit.png"/>
