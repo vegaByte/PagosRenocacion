@@ -121,18 +121,36 @@ namespace PagosRenovacion
                 try
                 {
                     float val = Convert.ToSingle(txtNombre.Text, CultureInfo.CreateSpecificCulture("en-US"));
-                    pago = new prc_pagos
+                    if (cmbxTipoPago.SelectedIndex < 5)
                     {
-                        id_pagos = 0,
-                        date_inicio = dateRecordarInicio.SelectedDate.Value,
-                        date_final = dateRecordarHasta.SelectedDate.Value,
-                        fk_id_tipopagos = (int)cmbxTipoPago.SelectedValue,
-                        fk_id_conceptos = (int)cmbxConcepto.SelectedValue,
-                        fk_id_usuarios = (App.Current.Resources["UsuarioActualR"] as UsuarioActual).UserName,
-                        activo = true,
-                        fk_id_actividades = 1
-                        
-                    };
+                        pago = new prc_pagos
+                        {
+                            id_pagos = 0,
+                            date_inicio = datePago.SelectedDate.Value,
+                            date_final = datePago.SelectedDate.Value,
+                            fk_id_tipopagos = (int)cmbxTipoPago.SelectedValue,
+                            fk_id_conceptos = (int)cmbxConcepto.SelectedValue,
+                            fk_id_usuarios = (App.Current.Resources["UsuarioActualR"] as UsuarioActual).UserName,
+                            activo = true,
+                            fk_id_actividades = 1
+
+                        };
+                    }
+                    else
+                    {
+                        pago = new prc_pagos
+                        {
+                            id_pagos = 0,
+                            date_inicio = dateRecordarInicio.SelectedDate.Value,
+                            date_final = dateRecordarHasta.SelectedDate.Value,
+                            fk_id_tipopagos = (int)cmbxTipoPago.SelectedValue,
+                            fk_id_conceptos = (int)cmbxConcepto.SelectedValue,
+                            fk_id_usuarios = (App.Current.Resources["UsuarioActualR"] as UsuarioActual).UserName,
+                            activo = true,
+                            fk_id_actividades = 1
+
+                        };
+                    }
                     DB.contexto.prc_pagos.Add(pago);
                     DB.contexto.SaveChanges();
 
@@ -354,8 +372,8 @@ namespace PagosRenovacion
             dateRecordarInicio.SelectedDate = timetemp;
             time = timetemp;
             dateRecordarInicio.DisplayDateEnd = dateRecordarHasta.SelectedDate;
-            dateRecordarInicio.DisplayDateStart = timetemp;
-            datePago.DisplayDateStart = timetemp;
+            //dateRecordarInicio.DisplayDateStart = timetemp;
+            //datePago.DisplayDateStart = timetemp;
             dateRecordarHasta.DisplayDateStart = dateRecordarInicio.SelectedDate;
 
             cmbxConcepto.ItemsSource = DB.contexto.prc_conceptos.ToList();

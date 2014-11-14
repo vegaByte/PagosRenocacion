@@ -121,5 +121,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="prc_sp_update_pagos" FunctionName="PRCModel.Store.prc_sp_update_pagos" />
   </EntityContainerMapping>
 </Mapping>

@@ -31,6 +31,10 @@ namespace PagosRenovacion
 
         private void btndone_Click(object sender, RoutedEventArgs e)
         {
+            //SP: prc_sp_update_pagos 
+            //Cambiar a estado "activo = 0" los servicios que ya vencieron al dia de hoy
+            DB.contexto.prc_sp_update_pagos();
+
             if (validator.ValidaString(txtuser.Text) && validator.ValidaString(txtpass.Password))
             {
                 LoginCommand login = new LoginCommand(txtuser.Text, txtpass.Password);

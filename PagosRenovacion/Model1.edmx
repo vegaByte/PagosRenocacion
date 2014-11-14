@@ -241,6 +241,7 @@ advertencia 6002: La tabla o vista 'dbpagoscontratos.dbo.prc_view_date_pagos' no
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="prc_sp_update_pagos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="PRCModelStoreContainer">
           <EntitySet Name="prc_actividades" EntityType="Self.prc_actividades" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="prc_conceptos" EntityType="Self.prc_conceptos" Schema="dbo" store:Type="Tables" />
@@ -583,6 +584,7 @@ advertencia 6002: La tabla o vista 'dbpagoscontratos.dbo.prc_view_date_pagos' no
             <End Role="prc_date_pagos" EntitySet="prc_date_pagos" />
             <End Role="prc_recargos" EntitySet="prc_recargos" />
           </AssociationSet>
+          <FunctionImport Name="prc_sp_update_pagos" />
         </EntityContainer>
         <EntityType Name="prc_recargos">
           <Key>
@@ -745,6 +747,7 @@ advertencia 6002: La tabla o vista 'dbpagoscontratos.dbo.prc_view_date_pagos' no
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="prc_sp_update_pagos" FunctionName="PRCModel.Store.prc_sp_update_pagos" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

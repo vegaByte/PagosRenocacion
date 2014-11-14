@@ -270,6 +270,7 @@
       <End Role="prc_date_pagos" EntitySet="prc_date_pagos" />
       <End Role="prc_recargos" EntitySet="prc_recargos" />
     </AssociationSet>
+    <FunctionImport Name="prc_sp_update_pagos" />
   </EntityContainer>
   <EntityType Name="prc_recargos">
     <Key>

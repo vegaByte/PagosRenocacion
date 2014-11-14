@@ -12,6 +12,8 @@ namespace PagosRenovacion
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class dbpagoscontratosEntities : DbContext
     {
@@ -37,5 +39,10 @@ namespace PagosRenovacion
         public virtual DbSet<prc_view_date_contratos> prc_view_date_contratos { get; set; }
         public virtual DbSet<prc_view_date_pagos> prc_view_date_pagos { get; set; }
         public virtual DbSet<prc_recargos> prc_recargos { get; set; }
+    
+        public virtual int prc_sp_update_pagos()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("prc_sp_update_pagos");
+        }
     }
 }

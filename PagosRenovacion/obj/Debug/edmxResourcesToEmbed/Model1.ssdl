@@ -236,6 +236,7 @@ advertencia 6002: La tabla o vista 'dbpagoscontratos.dbo.prc_view_date_pagos' no
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="prc_sp_update_pagos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="PRCModelStoreContainer">
     <EntitySet Name="prc_actividades" EntityType="Self.prc_actividades" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="prc_conceptos" EntityType="Self.prc_conceptos" Schema="dbo" store:Type="Tables" />
