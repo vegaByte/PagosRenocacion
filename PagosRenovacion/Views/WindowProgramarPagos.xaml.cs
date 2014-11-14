@@ -344,6 +344,7 @@ namespace PagosRenovacion
             cmbxTipoPago.SelectedIndex = 0;
             cmbxDiaNumero.SelectedIndex = 0;
             cmbxDiaNumero.SelectedIndex = 0;
+            cmbxActividad.SelectedIndex = 0;
             cmbxDiaNumero.Visibility = System.Windows.Visibility.Hidden;
             cmbxDiaSemana.Visibility = System.Windows.Visibility.Hidden;
             tipoCalendarInt = 0;
